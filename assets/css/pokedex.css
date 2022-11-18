@@ -84,6 +84,7 @@
     margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
+    cursor: pointer;
 }
 
 .pokemon .number {
@@ -146,6 +147,15 @@
     border-radius: 1rem;
 }
 
+.openDetails {
+    padding: .30rem .5rem;
+    margin: .25rem 0;
+    font-size: .625rem;
+    color: rgb(97, 95, 95);
+    border: none;
+    border-radius: 1rem;
+}
+
 @media screen and (min-width: 380px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;
@@ -162,4 +172,38 @@
     .pokemons {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+}
+
+.modal{
+    width: 500px;
+    height: 500px;
+    background-color: rgb(245, 241, 241);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    animation: animate;
+    animation-duration: 800ms;
+    border-radius: 1rem;
+
+}
+
+@keyframes animate {
+    from{opacity: 1;}
+    from{opacity: 0;}
+}
+
+.fechar{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.pokemonDetalhado{
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: 1rem;
+    text-align: center;
 }
